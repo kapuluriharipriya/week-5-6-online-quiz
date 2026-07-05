@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Quiz Application</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Home Screen -->
+        <div id="home-screen" class="screen active">
+            <div class="home-content">
+                <h1>🎯 Quiz Master</h1>
+                <p class="subtitle">Test Your Knowledge!</p>
+                <div class="quiz-categories">
+                    <button class="category-btn" data-category="general">
+                        <span class="icon">🌍</span>
+                        <span>General Knowledge</span>
+                    </button>
+                    <button class="category-btn" data-category="science">
+                        <span class="icon">🔬</span>
+                        <span>Science</span>
+                    </button>
+                    <button class="category-btn" data-category="history">
+                        <span class="icon">📚</span>
+                        <span>History</span>
+                    </button>
+                    <button class="category-btn" data-category="technology">
+                        <span class="icon">💻</span>
+                        <span>Technology</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quiz Screen -->
+        <div id="quiz-screen" class="screen">
+            <div class="quiz-container">
+                <div class="quiz-header">
+                    <div class="progress-bar">
+                        <div id="progress-fill" class="progress-fill"></div>
+                    </div>
+                    <div class="quiz-info">
+                        <span id="question-counter">Question 1 of 10</span>
+                        <span id="score-display">Score: 0</span>
+                    </div>
+                </div>
+
+                <div class="quiz-content">
+                    <h2 id="question-text"></h2>
+                    <div id="options-container" class="options-container"></div>
+                </div>
+
+                <div class="quiz-footer">
+                    <button id="prev-btn" class="nav-btn">← Previous</button>
+                    <button id="next-btn" class="nav-btn">Next →</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Results Screen -->
+        <div id="results-screen" class="screen">
+            <div class="results-container">
+                <h1>Quiz Completed! 🎉</h1>
+                <div class="score-circle">
+                    <div class="score-text">
+                        <span id="final-score">0</span>
+                        <span id="total-questions">/10</span>
+                    </div>
+                </div>
+                <p id="performance-message" class="performance-message"></p>
+                <div id="results-details" class="results-details"></div>
+                <button id="restart-btn" class="restart-btn">Take Another Quiz</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
